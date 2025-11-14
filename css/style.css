@@ -94,8 +94,7 @@ header {
   padding-left: 10px;
   margin-bottom: 30px;
 }
-
-/* بخش معرفی */
+/*هیرو*/
 .hero {
   width: 100%;
   display: flex;
@@ -111,21 +110,21 @@ header {
   background-color: #d9d9d9;
   border-radius: 40px;
   overflow: hidden;
+  max-width: 1300px;
 }
 
-/* اسلایدر */
-.slider {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
-
-.slider img {
+.slider-container img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-container img.active {
+  opacity: 1;
 }
 
 /* دکمه اسکرول */
