@@ -49,27 +49,27 @@
       <!-- منوی ناوبری -->
       <nav class="navbar">
         <div class="logo">
-          <a href="/index.html"
-            ><img src="/assets/images/nexbooklogo.svg" alt="لوگوی NEXBook"
-          /></a>
+          <a href="/index.html">
+            <img src="/assets/images/nexbooklogo.svg" alt="لوگوی NEXBook" />
+          </a>
         </div>
-        <ul class="nav-links" id="nav-links">
-          <li>
-            <a href="#">خانه</a>
-          </li>
-          <li>
-            <a href="#">دسته بندی ها</a>
-          </li>
-          <li>
-            <a href="#">فروشگاه</a>
-          </li>
-          <li>
-            <a href="#">ارتباط با ما</a>
-          </li>
 
-          <li class="user-account">
-            <a href="#">حساب کاربری</a>
-          </li>
+        <!-- دکمه همبرگر برای موبایل -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <!-- دکمه بستن منو فقط در موبایل -->
+          <li class="close-menu" id="close-menu">✕ بستن</li>
+
+          <li><a href="#">خانه</a></li>
+          <li><a href="#">دسته بندی ها</a></li>
+          <li><a href="#">فروشگاه</a></li>
+          <li><a href="#">ارتباط با ما</a></li>
+          <li class="user-account"><a href="#">حساب کاربری</a></li>
         </ul>
       </nav>
     </header>

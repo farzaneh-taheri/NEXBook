@@ -66,6 +66,35 @@ header {
   background-color: #1600ab;
 }
 
+/* ==== همبرگر ==== */
+.hamburger {
+  display: none; /* فقط در موبایل نمایش داده می‌شود */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 1px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* دکمه بستن */
+.close-menu {
+  display: none;
+  font-size: 18px;
+  color: #1600ab;
+  cursor: pointer;
+  text-align: start;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
 /* بخش معرفی */
 .hero {
   width: 100%;
@@ -432,4 +461,191 @@ footer {
   color: #777;
   font-size: 0.9rem;
   direction: rtl;
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 14px; /* فونت کمی کوچکتر */
+  }
+
+  /* حالت پیشفرض منو بسته است */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* خارج از صفحه */
+    height: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 20px;
+    transition: right 0.3s ease;
+    z-index: 100;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    text-align: end;
+    width: auto;
+    gap: 35px;
+  }
+
+  /* وقتی باز شد */
+  .nav-links.active {
+    right: -12px; /* داخل صفحه */
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .close-menu {
+    display: block;
+    margin-top: -72px;
+    margin-left: 50px;
+  }
+
+  /* تغییر همبرگر به ضربدر */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  header {
+    width: 95%;
+    padding: 8px 20px;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .user-account a {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .hero {
+    margin-top: 20px;
+  }
+
+  .slider-container {
+    height: 200px; /* ارتفاع اسلایدر کوچکتر */
+    border-radius: 20px;
+  }
+
+  .scroll-down {
+    width: 35px;
+    height: 35px;
+  }
+
+  .scroll-down img {
+    width: 50px;
+  }
+
+  section {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  .latest-header h2,
+  .best-header h2,
+  .audio-books-header h2 {
+    font-size: 20px;
+  }
+
+  .slicebook a {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .scroll-drag {
+    gap: 20px;
+  }
+
+  .latest-book,
+  .best-book {
+    width: 140px;
+  }
+
+  .latest-book img,
+  .best-book img {
+    height: 200px;
+  }
+
+  .book-name {
+    font-size: 14px;
+  }
+
+  .book-category {
+    font-size: 12px;
+  }
+
+  .audio-book-box {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  .play-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .audio-books-list {
+    gap: 30px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: -109px;
+  }
+
+  .footer-logo img {
+    width: 40%;
+  }
+
+  .footer-links,
+  .footer-social {
+    text-align: center;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-social {
+    margin-bottom: -109px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }

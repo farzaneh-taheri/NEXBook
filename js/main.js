@@ -51,3 +51,18 @@ sliders.forEach((slider) => {
     });
   });
 });
+
+//فعال و غیر فعال شدن منوی همبرگری در گوشی
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+const closeMenu = document.getElementById("close-menu");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active"); // باز و بسته کردن منو
+  hamburger.classList.toggle("active"); // تغییر شکل همبرگر به ضربدر
+});
+
+closeMenu.addEventListener("click", () => {
+  navLinks.classList.remove("active"); // فقط منو را ببند
+  hamburger.classList.remove("active"); // همبرگر به حالت اصلی برگردد
+});
