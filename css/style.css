@@ -551,7 +551,7 @@ footer {
   }
 
   .slider-container {
-    height: 200px; /* ارتفاع اسلایدر کوچکتر */
+    height: 108px; /* ارتفاع اسلایدر کوچکتر */
     border-radius: 20px;
   }
 
@@ -581,7 +581,8 @@ footer {
   }
 
   .scroll-drag {
-    gap: 20px;
+    gap: 0;
+    margin-right: -153px;
   }
 
   .latest-book,
@@ -591,30 +592,33 @@ footer {
 
   .latest-book img,
   .best-book img {
-    height: 200px;
+    height: 140px;
+    width: 105px;
   }
 
   .book-name {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .book-category {
-    font-size: 12px;
+    font-size: 9px;
   }
 
   .audio-book-box {
-    width: 180px;
-    height: 180px;
+    width: 95px;
+    height: 97px;
     border-radius: 15px;
+  }
+  .audio-book-category {
+    font-size: 10px;
   }
 
   .play-btn img {
-    width: 18px;
-    height: 18px;
+    height: 28px !important;
   }
 
   .audio-books-list {
-    gap: 30px;
+    gap: 0;
   }
 
   footer .footer-container {
